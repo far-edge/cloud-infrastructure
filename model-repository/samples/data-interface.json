@@ -1,0 +1,19 @@
+{
+  "_id": "6b8b37d0-3f74-4d80-9669-7aafb545f9f8",
+  "name": "Over MQTT",
+  "communicationProtocol": "MQTT",
+  "parameters": {
+    "parameter": [
+      {
+        "name": "host",
+        "description": "The host where the MQTT broker runs.",
+        "dataType": "string"
+      },
+      {
+        "name": "port",
+        "description": "The port where the MQTT broker listens.",
+        "dataType": "int"
+      }
+    ]
+  }
+}

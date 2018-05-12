@@ -1,0 +1,7 @@
+{
+  "_id": "445a4277-0623-4318-a494-8308bd998f3f",
+  "name": "Temperature (in C) in JSON",
+  "description": "Temperature values (in Celcius) in JSON format.",
+  "format": "JSON",
+  "quantityKind": "Temperature"
+}

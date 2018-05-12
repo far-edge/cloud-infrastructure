@@ -1,0 +1,10 @@
+{
+  "_id": "a89524a9-e8f7-455c-857b-0380ff308412",
+  "name": "Temperature in JSON Format over MQTT",
+  "dataInterfaceReferenceID": "6b8b37d0-3f74-4d80-9669-7aafb545f9f8",
+  "dataKindReferenceIDs": {
+    "dataKindReferenceID": [
+      "445a4277-0623-4318-a494-8308bd998f3f"
+    ]
+  }
+}
