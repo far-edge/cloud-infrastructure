@@ -2,6 +2,13 @@
 
 **NOTE:** The project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+##### [1.0.1] - 2018-05-19
+
+**ADDED**
+
+* Dockerise.
+* Upgrade node from 10.0.0 to 10.1.0.
+
 ---
 
 ##### [1.0.0] - 2018-05-13

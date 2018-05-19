@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  faredge-model-repository:
+    container_name: "faredge-model-repository"
+    build: .
+    volumes:
+      - ./:/faredge/model-repository
+    env_file: .env
+    ports:
+      - "${PORT}:${PORT}"
+    links:
+      - faredge-data-storage
+    command: /faredge/model-repository/node_modules/.bin/nodemon --inspect --exec 'node' server.js
+
+  faredge-data-storage:
+    container_name: "faredge-data-storage"
+    image: mongo:3.6.4
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "${MONGODB_PORT}:27017"

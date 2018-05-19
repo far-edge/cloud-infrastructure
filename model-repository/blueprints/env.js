@@ -2,7 +2,7 @@ const validations = require('../core/common/validations');
 
 const env = validations.object({
   API_BASE_URL: validations.string().uri().required(),
-  HOST: validations.string().ip().required(),
+  HOST: validations.string().hostname().required(),
   LOG_LEVEL: validations.string().allow([
     'debug',
     'error',
