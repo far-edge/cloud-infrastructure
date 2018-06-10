@@ -7,12 +7,14 @@
       {
         "name": "host",
         "description": "The host where the MQTT broker runs.",
-        "dataType": "string"
+        "dataType": "string",
+        "defaultValue": "localhost"
       },
       {
         "name": "port",
         "description": "The port where the MQTT broker listens.",
-        "dataType": "int"
+        "dataType": "int",
+        "defaultValue": 1883
       }
     ]
   }

@@ -17,7 +17,7 @@ const createDataInterface = (overrides) => {
             name: faker.random.words(2),
             description: faker.random.words(10),
             dataType: faker.random.words(2),
-            defaultValue: faker.random.words(2)
+            defaultValue: faker.random.boolean() ? faker.random.number(100) : faker.random.words(2)
           }
         ]
       }

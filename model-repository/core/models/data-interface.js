@@ -24,7 +24,7 @@ const ParameterSchema = new mongoose.Schema({
 
   // The default value of the parameter.
   defaultValue: {
-    type: String,
+    type: mongoose.Schema.Types.Mixed,
     required: false
   }
 
