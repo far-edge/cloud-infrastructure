@@ -18,21 +18,21 @@ const deleteDataKind = {
   }
 };
 
-// How to get a data kind.
-const getDataKind = {
-  params: {
-    id: validations.id().required()
-  }
-};
-
-// How to search for data kinds.
-const searchDataKinds = {
+// How to discover data kinds.
+const discoverDataKinds = {
   body: {
     name: validations.string().allow('').allow(null).optional(),
     description: validations.string().allow('').allow(null).optional(),
     modelType: validations.string().allow('').allow(null).optional(),
     format: validations.string().allow('').allow(null).optional(),
     quantityKind: validations.string().allow('').allow(null).optional()
+  }
+};
+
+// How to get a data kind.
+const getDataKind = {
+  params: {
+    id: validations.id().required()
   }
 };
 
@@ -53,7 +53,7 @@ const updateDataKind = {
 module.exports = {
   createDataKind,
   deleteDataKind,
+  discoverDataKinds,
   getDataKind,
-  searchDataKinds,
   updateDataKind
 };

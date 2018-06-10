@@ -1,8 +1,8 @@
 const Promise = require('bluebird');
 
 const app = require('../../../server');
-const requests = require('../../requests');
 const dataKindHelper = require('../../helpers/data-kinds');
+const requests = require('../../requests');
 
 // Tests the data kind deletion.
 const testDeleteDataKind = () => {

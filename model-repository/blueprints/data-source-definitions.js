@@ -18,19 +18,19 @@ const deleteDataSourceDefinition = {
   }
 };
 
-// How to get a data source definition.
-const getDataSourceDefinition = {
-  params: {
-    id: validations.id().required()
-  }
-};
-
-// How to search for data source definitions.
-const searchDataSourceDefinitions = {
+// How to discover data source definitions.
+const discoverDataSourceDefinitions = {
   body: {
     name: validations.string().optional(),
     dataInterfaceReferenceID: validations.id().optional(),
     dataKindReferenceID: validations.id().optional()
+  }
+};
+
+// How to get a data source definition.
+const getDataSourceDefinition = {
+  params: {
+    id: validations.id().required()
   }
 };
 
@@ -51,7 +51,7 @@ const updateDataSourceDefinition = {
 module.exports = {
   createDataSourceDefinition,
   deleteDataSourceDefinition,
+  discoverDataSourceDefinitions,
   getDataSourceDefinition,
-  searchDataSourceDefinitions,
   updateDataSourceDefinition
 };

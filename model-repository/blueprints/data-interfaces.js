@@ -25,18 +25,18 @@ const deleteDataInterface = {
   }
 };
 
+// How to discover data interfaces.
+const discoverDataInterfaces = {
+  body: {
+    name: validations.string().allow('').allow(null).optional(),
+    communicationProtocol: validations.string().allow('').allow(null).optional()
+  }
+};
+
 // How to get a data kind.
 const getDataInterface = {
   params: {
     id: validations.id().required()
-  }
-};
-
-// How to search for data interfaces.
-const searchDataInterfaces = {
-  body: {
-    name: validations.string().allow('').allow(null).optional(),
-    communicationProtocol: validations.string().allow('').allow(null).optional()
   }
 };
 
@@ -57,7 +57,7 @@ const updateDataInterface = {
 module.exports = {
   createDataInterface,
   deleteDataInterface,
+  discoverDataInterfaces,
   getDataInterface,
-  searchDataInterfaces,
   updateDataInterface
 };

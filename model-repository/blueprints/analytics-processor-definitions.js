@@ -30,19 +30,19 @@ const deleteAnalyticsProcessorDefinition = {
   }
 };
 
-// How to get a data kind.
-const getAnalyticsProcessorDefinition = {
-  params: {
-    id: validations.id().required()
-  }
-};
-
-// How to search for analytics processor definitions.
-const searchAnalyticsProcessorDefinitions = {
+// How to discover analytics processor definitions.
+const discoverAnalyticsProcessorDefinitions = {
   body: {
     name: validations.string().allow('').allow(null).optional(),
     processorType: validations.string().allow('').allow(null).optional(),
     version: validations.string().allow('').allow(null).optional()
+  }
+};
+
+// How to get a data kind.
+const getAnalyticsProcessorDefinition = {
+  params: {
+    id: validations.id().required()
   }
 };
 
@@ -68,7 +68,7 @@ const updateAnalyticsProcessorDefinition = {
 module.exports = {
   createAnalyticsProcessorDefinition,
   deleteAnalyticsProcessorDefinition,
+  discoverAnalyticsProcessorDefinitions,
   getAnalyticsProcessorDefinition,
-  searchAnalyticsProcessorDefinitions,
   updateAnalyticsProcessorDefinition
 };

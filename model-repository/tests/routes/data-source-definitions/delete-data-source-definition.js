@@ -1,8 +1,8 @@
 const Promise = require('bluebird');
 
 const app = require('../../../server');
-const requests = require('../../requests');
 const dataSourceDefinitionHelper = require('../../helpers/data-source-definitions');
+const requests = require('../../requests');
 
 // Tests the data source definition deletion.
 const testDeleteDataSourceDefinition = () => {

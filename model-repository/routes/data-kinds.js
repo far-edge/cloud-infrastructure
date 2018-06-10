@@ -177,9 +177,9 @@ router.route('/:id').delete(validate(blueprint.deleteDataKind), lift(method.dele
 router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKind), respond);
 
 /**
- * @api {post} /data-kinds/search Search for data kinds
- * @apiName SearchDataKinds
- * @apiDescription Searches for data kinds.
+ * @api {post} /data-kinds/discover Discover data kinds
+ * @apiName DiscoverDataKinds
+ * @apiDescription Discovers data kinds.
  * @apiGroup DATA KINDS
  *
  * @apiParam {String} [name] The name of the data kind.
@@ -224,9 +224,9 @@ router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKin
  * @apiExample {curl} Example
  *   curl -H 'Content-Type: application/json' \
  *        -d '{ "format": "JSON" }' \
- *        -X POST http://localhost:8888/api/data-kinds/search
+ *        -X POST http://localhost:8888/api/data-kinds/discover
  */
-router.route('/search').post(validate(blueprint.searchDataKinds), lift(method.searchDataKinds),
-  respond);
+router.route('/discover').post(validate(blueprint.discoverDataKinds),
+  lift(method.discoverDataKinds), respond);
 
 module.exports = router;

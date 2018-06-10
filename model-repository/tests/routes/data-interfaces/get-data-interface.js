@@ -1,8 +1,8 @@
 const Promise = require('bluebird');
 
 const app = require('../../../server');
-const requests = require('../../requests');
 const dataInterfaceHelper = require('../../helpers/data-interfaces');
+const requests = require('../../requests');
 
 // Tests the data interface retrieval.
 const testGetDataInterface = () => {

@@ -252,9 +252,9 @@ router.route('/:id').get(validate(blueprint.getDataInterface), lift(method.getDa
   respond);
 
 /**
- * @api {post} /data-interfaces/search Search for data interfaces
- * @apiName SearchDataInterfaces
- * @apiDescription Searches for data interfaces.
+ * @api {post} /data-interfaces/discover Discover data interfaces
+ * @apiName DiscoverDataInterfaces
+ * @apiDescription Discovers data interfaces.
  * @apiGroup DATA INTERFACES
  *
  * @apiParam {String} [name] The name of the data interface.
@@ -308,9 +308,9 @@ router.route('/:id').get(validate(blueprint.getDataInterface), lift(method.getDa
  * @apiExample {curl} Example
  *   curl -H 'Content-Type: application/json' \
  *        -d '{ "communicationProtocol": "MQTT" }' \
- *        -X POST http://localhost:8888/api/data-interfaces/search
+ *        -X POST http://localhost:8888/api/data-interfaces/discover
  */
-router.route('/search').post(validate(blueprint.searchDataInterfaces),
-  lift(method.searchDataInterfaces), respond);
+router.route('/discover').post(validate(blueprint.discoverDataInterfaces),
+  lift(method.discoverDataInterfaces), respond);
 
 module.exports = router;

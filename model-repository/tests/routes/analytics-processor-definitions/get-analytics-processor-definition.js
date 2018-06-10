@@ -1,8 +1,8 @@
 const Promise = require('bluebird');
 
+const analyticsProcessorDefinitionHelper = require('../../helpers/analytics-processor-definitions');
 const app = require('../../../server');
 const requests = require('../../requests');
-const analyticsProcessorDefinitionHelper = require('../../helpers/analytics-processor-definitions');
 
 // Tests the analytics processor definition retrieval.
 const testGetAnalyticsProcessorDefinition = () => {

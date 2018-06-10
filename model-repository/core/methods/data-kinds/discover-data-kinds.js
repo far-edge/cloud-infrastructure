@@ -4,8 +4,8 @@ const DataKind = require('../../models/data-kind');
 const logger = require('../../common/loggers').get('DATA-KINDS');
 
 // Searches for data kinds.
-const searchhDataKinds = (input) => {
-  logger.debug('Search for data kinds.');
+const discoverDataKinds = (input) => {
+  logger.debug('Discover data kinds.');
   return Promise.try(() => {
     // Find the data kinds that match the given criteria.
     return DataKind.find({
@@ -16,12 +16,12 @@ const searchhDataKinds = (input) => {
       ...(input.quantityKind ? { quantityKind: input.quantityKind } : { })
     });
   }).then((dataKinds) => {
-    logger.debug('Searched for data kinds.');
+    logger.debug('Discovered data kinds.');
     return { dataKinds };
   }).catch((error) => {
-    logger.error('Failed to search for data kinds.', error);
+    logger.error('Failed to discover data kinds.', error);
     throw error;
   });
 };
 
-module.exports = searchhDataKinds;
+module.exports = discoverDataKinds;

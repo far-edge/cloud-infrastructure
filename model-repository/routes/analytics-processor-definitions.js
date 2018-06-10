@@ -217,9 +217,9 @@ router.route('/:id').get(validate(blueprint.getAnalyticsProcessorDefinition),
   lift(method.getAnalyticsProcessorDefinition), respond);
 
 /**
- * @api {post} /analytics-processor-definitions/search Search for analytics processor definitions
- * @apiName SearchAnalyticsProcessorDefinitions
- * @apiDescription Searches for analytics processor definitions.
+ * @api {post} /analytics-processor-definitions/discover Discover analytics processor definitions
+ * @apiName DiscoverAnalyticsProcessorDefinitions
+ * @apiDescription Discovers analytics processor definitions.
  * @apiGroup ANALYTICS PROCESSOR DEFINITIONS
  *
  * @apiParam {String} [name] The name of the analytics processor definition.
@@ -268,9 +268,9 @@ router.route('/:id').get(validate(blueprint.getAnalyticsProcessorDefinition),
  * @apiExample {curl} Example
  *   curl -H 'Content-Type: application/json' \
  *        -d '{ "processorType": "average" }' \
- *        -X POST http://localhost:8888/api/analytics-processor-definitions/search
+ *        -X POST http://localhost:8888/api/analytics-processor-definitions/discover
  */
-router.route('/search').post(validate(blueprint.searchAnalyticsProcessorDefinitions),
-  lift(method.searchAnalyticsProcessorDefinitions), respond);
+router.route('/discover').post(validate(blueprint.discoverAnalyticsProcessorDefinitions),
+  lift(method.discoverAnalyticsProcessorDefinitions), respond);
 
 module.exports = router;

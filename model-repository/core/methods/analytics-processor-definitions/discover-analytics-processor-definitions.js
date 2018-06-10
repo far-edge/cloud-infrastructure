@@ -3,9 +3,9 @@ const Promise = require('bluebird');
 const AnalyticsProcessorDefinition = require('../../models/analytics-processor-definition');
 const logger = require('../../common/loggers').get('ANALYTICS-PROCESSOR-DEFINITIONS');
 
-// Searches for analytics processor definitions.
-const searchhAnalyticsProcessorDefinitions = (input) => {
-  logger.debug('Search for analytics processor definitions.');
+// Discovers analytics processor definitions.
+const discoverAnalyticsProcessorDefinitions = (input) => {
+  logger.debug('Discover analytics processor definitions.');
   return Promise.try(() => {
     // Find the analytics processor definitions that match the given criteria.
     return AnalyticsProcessorDefinition.find({
@@ -15,12 +15,12 @@ const searchhAnalyticsProcessorDefinitions = (input) => {
 
     });
   }).then((analyticsProcessorDefinitions) => {
-    logger.debug('Searched for analytics processor definitions.');
+    logger.debug('Discovered analytics processor definitions.');
     return { analyticsProcessorDefinitions };
   }).catch((error) => {
-    logger.error('Failed to search for analytics processor definitions.', error);
+    logger.error('Failed to discover analytics processor definitions.', error);
     throw error;
   });
 };
 
-module.exports = searchhAnalyticsProcessorDefinitions;
+module.exports = discoverAnalyticsProcessorDefinitions;

@@ -190,9 +190,9 @@ router.route('/:id').get(validate(blueprint.getDataSourceDefinition),
   lift(method.getDataSourceDefinition), respond);
 
 /**
- * @api {post} /data-source-definitions/search Search for data source definitions
- * @apiName SearchDataSourceDefinitions
- * @apiDescription Searches for data source definitions.
+ * @api {post} /data-source-definitions/discover Discover data source definitions
+ * @apiName DiscoverDataSourceDefinitions
+ * @apiDescription Discovers data source definitions.
  * @apiGroup DATA SOURCE DEFINITIONS
  *
  * @apiParam {String} [name] The name of the data source definition.
@@ -235,9 +235,9 @@ router.route('/:id').get(validate(blueprint.getDataSourceDefinition),
  * @apiExample {curl} Example
  *   curl -H 'Content-Type: application/json' \
  *        -d '{ "dataKindReferenceID": "445a4277-0623-4318-a494-8308bd998f3f" }' \
- *        -X POST http://localhost:8888/api/data-source-definitions/search
+ *        -X POST http://localhost:8888/api/data-source-definitions/discover
  */
-router.route('/search').post(validate(blueprint.searchDataSourceDefinitions),
-  lift(method.searchDataSourceDefinitions), respond);
+router.route('/discover').post(validate(blueprint.discoverDataSourceDefinitions),
+  lift(method.discoverDataSourceDefinitions), respond);
 
 module.exports = router;

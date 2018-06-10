@@ -1,20 +1,20 @@
 const Promise = require('bluebird');
 
+const analyticsProcessorDefinitionHelper = require('../../helpers/analytics-processor-definitions');
 const app = require('../../../server');
 const requests = require('../../requests');
-const analyticsProcessorDefinitionHelper = require('../../helpers/analytics-processor-definitions');
 
-// Tests the analytics processor definition search.
-const testSearchAnalyticsProcessorDefinitions = () => {
-  describe('PSST @ /analytics-processor-definitions/search', () => {
-    it('should search for analytics processor definitions', () => {
+// Tests the analytics processor definition discovery.
+const testDiscoverAnalyticsProcessorDefinitions = () => {
+  describe('PSST @ /analytics-processor-definitions/discover', () => {
+    it('should discover analytics processor definitions', () => {
       const p = Promise.try(() => {
         return analyticsProcessorDefinitionHelper.createAnalyticsProcessorDefinition();
       }).then((analyticsProcessorDefinition) => {
         const data = {
           name: analyticsProcessorDefinition.name
         };
-        return requests.cpost(app, '/api/analytics-processor-definitions/search', data);
+        return requests.cpost(app, '/api/analytics-processor-definitions/discover', data);
       });
       return Promise.all([
         p.should.eventually.have.property('statusCode', 200),
@@ -26,4 +26,4 @@ const testSearchAnalyticsProcessorDefinitions = () => {
   });
 };
 
-module.exports = testSearchAnalyticsProcessorDefinitions;
+module.exports = testDiscoverAnalyticsProcessorDefinitions;
