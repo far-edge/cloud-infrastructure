@@ -28,6 +28,7 @@ const deleteDataInterface = {
 // How to discover data interfaces.
 const discoverDataInterfaces = {
   body: {
+    _id: validations.id().allow('').allow(null).optional(),
     name: validations.string().allow('').allow(null).optional(),
     communicationProtocol: validations.string().allow('').allow(null).optional()
   }

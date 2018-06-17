@@ -18,7 +18,7 @@ const deleteDataInterface = (input) => {
     }
     // Delete the data interface.
     return dataInterface.remove();
-  }).then((_dataInterface) => {
+  }).then(() => {
     logger.debug(`Deleted data interface ${ input.id }.`);
     return null;
   }).catch((error) => {

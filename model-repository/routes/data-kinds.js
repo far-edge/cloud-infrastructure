@@ -182,6 +182,7 @@ router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKin
  * @apiDescription Discovers data kinds.
  * @apiGroup DATA KINDS
  *
+ * @apiParam {String} [_id] The ID of the data kind.
  * @apiParam {String} [name] The name of the data kind.
  * @apiParam {String} [description] The description of the data kind.
  * @apiParam {String} [modelType] The model type of the data kind (e.g., SenML).
@@ -206,7 +207,7 @@ router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKin
  *   HTTP/1.1 200 OK
  *   {
  *     "dataKinds": [
- *       "id": "445a4277-0623-4318-a494-8308bd998f3f",
+ *       "_id": "445a4277-0623-4318-a494-8308bd998f3f",
  *       "name": "Temperature (in C) in JSON",
  *       "description": "Temperature values (in Celcius) in JSON format.",
  *       "format": "JSON",

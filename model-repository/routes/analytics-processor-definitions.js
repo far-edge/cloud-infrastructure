@@ -222,6 +222,7 @@ router.route('/:id').get(validate(blueprint.getAnalyticsProcessorDefinition),
  * @apiDescription Discovers analytics processor definitions.
  * @apiGroup ANALYTICS PROCESSOR DEFINITIONS
  *
+ * @apiParam {String} [_id] The ID of the analytics processor definition.
  * @apiParam {String} [name] The name of the analytics processor definition.
  * @apiParam {String} [processorType] The processor type of the analytics processor definition.
  * @apiParam {String} [version] The version of the analytics processor definition.
@@ -249,7 +250,7 @@ router.route('/:id').get(validate(blueprint.getAnalyticsProcessorDefinition),
  *   {
  *     "analyticsProcessorDefinitions" : [
  *       {
- *         "id": "5376c0aa-a93a-49e7-a5d9-16ff56d2e014",
+ *         "_id": "5376c0aa-a93a-49e7-a5d9-16ff56d2e014",
  *         "name": "Average calculator",
  *         "description": "Represents processors that read values from their source, calculate the running average, and write it to their sink.",
  *         "processorType": "average",

@@ -18,7 +18,7 @@ const deleteDataKind = (input) => {
     }
     // Delete the data kind.
     return dataKind.remove();
-  }).then((_dataKind) => {
+  }).then(() => {
     logger.debug(`Deleted data kind ${ input.id }.`);
     return null;
   }).catch((error) => {

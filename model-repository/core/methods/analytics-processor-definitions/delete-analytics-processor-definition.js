@@ -18,7 +18,7 @@ const deleteAnalyticsProcessorDefinition = (input) => {
     }
     // Delete the analytics processor definition.
     return analyticsProcessorDefinition.remove();
-  }).then((_analyticsProcessorDefinition) => {
+  }).then(() => {
     logger.debug(`Deleted analytics processor definition ${ input.id }.`);
     return null;
   }).catch((error) => {

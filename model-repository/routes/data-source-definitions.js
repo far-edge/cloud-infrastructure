@@ -195,6 +195,7 @@ router.route('/:id').get(validate(blueprint.getDataSourceDefinition),
  * @apiDescription Discovers data source definitions.
  * @apiGroup DATA SOURCE DEFINITIONS
  *
+ * @apiParam {String} [_id] The ID of the data source definition.
  * @apiParam {String} [name] The name of the data source definition.
  * @apiSuccess {String} [dataInterfaceReferenceID] The data interface of the data source definition.
  * @apiSuccess {String} [dataKindReferenceID] The data kind of the data source definition.

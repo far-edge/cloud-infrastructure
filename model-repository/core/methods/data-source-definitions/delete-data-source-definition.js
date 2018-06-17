@@ -18,7 +18,7 @@ const deleteDataSourceDefinition = (input) => {
     }
     // Delete the data source definition.
     return dataSourceDefinition.remove();
-  }).then((_dataSourceDefinition) => {
+  }).then(() => {
     logger.debug(`Deleted data source definition ${ input.id }.`);
     return null;
   }).catch((error) => {

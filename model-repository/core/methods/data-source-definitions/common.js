@@ -4,7 +4,7 @@ const DataInterface = require('../../models/data-interface');
 const DataKind = require('../../models/data-kind');
 const DataSourceDefinition = require('../../models/data-source-definition');
 const errors = require('../../common/errors');
-const logger = require('../../common/loggers').get('DATA-SOURCE_DEFINITIONS');
+const logger = require('../../common/loggers').get('DATA-SOURCE-DEFINITIONS');
 
 // Validates a data source definition.
 const validateDataSourceDefinition = (dataSourceDefinition) => {

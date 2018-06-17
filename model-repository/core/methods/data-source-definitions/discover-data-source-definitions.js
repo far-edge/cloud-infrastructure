@@ -9,6 +9,7 @@ const discoverDataSourceDefinitions = (input) => {
   return Promise.try(() => {
     // Find the data source definitions that match the given criteria.
     return DataSourceDefinition.find({
+      ...(input._id ? { _id: input._id } : { }),
       ...(input.name ? { name: input.name } : { }),
       ...(input.dataInterfaceReferenceID ? {
         dataInterfaceReferenceID: input.dataInterfaceReferenceID
