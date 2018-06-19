@@ -27,7 +27,7 @@ const router = express.Router({ mergeParams: true });
  *     "quantityKind": "Temperature"
  *   }
  *
- * @apiSuccess {String} _id The ID of the data kind.
+ * @apiSuccess {String} id The ID of the data kind.
  * @apiSuccess {String} name The name of the data kind.
  * @apiSuccess {String} [description] The description of the data kind.
  * @apiSuccess {String} [modelType] The model type of the data kind (e.g., SenML).
@@ -36,7 +36,7 @@ const router = express.Router({ mergeParams: true });
  * @apiSuccessExample Success
  *   HTTP/1.1 201 Created
  *   {
- *     "_id": "445a4277-0623-4318-a494-8308bd998f3f",
+ *     "id": "445a4277-0623-4318-a494-8308bd998f3f",
  *     "name": "Temperature (in C) in JSON",
  *     "description": "Temperature values (in Celcius) in JSON format.",
  *     "format": "JSON",
@@ -80,7 +80,7 @@ router.route('/').post(validate(blueprint.createDataKind), lift(method.createDat
  *     "quantityKind": "Temperature"
  *   }
  *
- * @apiSuccess {String} _id The ID of the data kind.
+ * @apiSuccess {String} id The ID of the data kind.
  * @apiSuccess {String} name The name of the data kind.
  * @apiSuccess {String} [description] The description of the data kind.
  * @apiSuccess {String} [modelType] The model type of the data kind (e.g., SenML).
@@ -89,7 +89,7 @@ router.route('/').post(validate(blueprint.createDataKind), lift(method.createDat
  * @apiSuccessExample Success
  *   HTTP/1.1 200 OK
  *   {
- *     "_id": "445a4277-0623-4318-a494-8308bd998f3f",
+ *     "id": "445a4277-0623-4318-a494-8308bd998f3f",
  *     "name": "Temperature (in C) in JSON",
  *     "description": "Temperature values (in Celcius) in JSON format.",
  *     "format": "JSON",
@@ -147,7 +147,7 @@ router.route('/:id').delete(validate(blueprint.deleteDataKind), lift(method.dele
  *
  * @apiParam {String} id The ID of the data kind.
  *
- * @apiSuccess {String} _id The ID of the data kind.
+ * @apiSuccess {String} id The ID of the data kind.
  * @apiSuccess {String} name The name of the data kind.
  * @apiSuccess {String} [description] The description of the data kind.
  * @apiSuccess {String} [modelType] The model type of the data kind (e.g., SenML).
@@ -156,7 +156,7 @@ router.route('/:id').delete(validate(blueprint.deleteDataKind), lift(method.dele
  * @apiSuccessExample Success
  *   HTTP/1.1 200 OK
  *   {
- *     "_id": "445a4277-0623-4318-a494-8308bd998f3f",
+ *     "id": "445a4277-0623-4318-a494-8308bd998f3f",
  *     "name": "Temperature (in C) in JSON",
  *     "description": "Temperature values (in Celcius) in JSON format.",
  *     "format": "JSON",
@@ -182,7 +182,7 @@ router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKin
  * @apiDescription Discovers data kinds.
  * @apiGroup DATA KINDS
  *
- * @apiParam {String} [_id] The ID of the data kind.
+ * @apiParam {String} [id] The ID of the data kind.
  * @apiParam {String} [name] The name of the data kind.
  * @apiParam {String} [description] The description of the data kind.
  * @apiParam {String} [modelType] The model type of the data kind (e.g., SenML).
@@ -197,7 +197,7 @@ router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKin
  *   }
  *
  * @apiSuccess {Object[]} dataKinds The data kinds that match the given criteria.
- * @apiSuccess {String} dataKinds._id The ID of the data kind.
+ * @apiSuccess {String} dataKinds.id The ID of the data kind.
  * @apiSuccess {String} dataKinds.name The name of the data kind.
  * @apiSuccess {String} [dataKinds.description] The description of the data kind.
  * @apiSuccess {String} [dataKinds.modelType] The model type of the data kind (e.g., SenML).
@@ -207,7 +207,7 @@ router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKin
  *   HTTP/1.1 200 OK
  *   {
  *     "dataKinds": [
- *       "_id": "445a4277-0623-4318-a494-8308bd998f3f",
+ *       "id": "445a4277-0623-4318-a494-8308bd998f3f",
  *       "name": "Temperature (in C) in JSON",
  *       "description": "Temperature values (in Celcius) in JSON format.",
  *       "format": "JSON",

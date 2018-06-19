@@ -9,7 +9,7 @@ const discoverAnalyticsProcessorDefinitions = (input) => {
   return Promise.try(() => {
     // Find the analytics processor definitions that match the given criteria.
     return AnalyticsProcessorDefinition.find({
-      ...(input._id ? { _id: input._id } : { }),
+      ...(input.id ? { _id: input.id } : { }),
       ...(input.name ? { name: input.name } : { }),
       ...(input.processorType ? { processorType: input.processorType } : { }),
       ...(input.version ? { version: input.version } : { }),

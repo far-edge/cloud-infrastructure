@@ -1,0 +1,9 @@
+{
+  "id": "ccf8c3b3-f4f7-4ff4-8746-3bf43ab34618",
+  "name": "Echoer",
+  "processorType": "echo",
+  "version": "1.0.0",
+  "copyright": "Athens Information Technology",
+  "description": "Processors that echo values.",
+  "processorLocation": "/var/processors/echo-1.0.0-with-dependencies.jar"
+}

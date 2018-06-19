@@ -34,7 +34,7 @@ const router = express.Router({ mergeParams: true });
  *     "version": "1.0.0"
  *   }
  *
- * @apiSuccess {String} _id The ID of the analytics processor definition.
+ * @apiSuccess {String} id The ID of the analytics processor definition.
  * @apiSuccess {String} name The name of the analytics processor definition.
  * @apiSuccess {String} [description] The description of the analytics processor definition.
  * @apiSuccess {String} processorType The processor type of the analytics processor definition.
@@ -79,7 +79,7 @@ router.route('/').post(validate(blueprint.createAnalyticsProcessorDefinition),
 /**
  * @api {put} /analytics-processor-definitions/:id Update analytics processor definition
  * @apiName UpdateAnalyticsProcessorDefinition
- * @apiDescription Updates a analytics processor definition.
+ * @apiDescription Updates an analytics processor definition.
  * @apiGroup ANALYTICS PROCESSOR DEFINITIONS
  *
  * @apiParam {String} id The ID of the analytics processor definition.
@@ -103,7 +103,7 @@ router.route('/').post(validate(blueprint.createAnalyticsProcessorDefinition),
  *     "version": "1.0.0"
  *   }
  *
- * @apiSuccess {String} _id The ID of the analytics processor definition.
+ * @apiSuccess {String} id The ID of the analytics processor definition.
  * @apiSuccess {String} name The name of the analytics processor definition.
  * @apiSuccess {String} [description] The description of the analytics processor definition.
  * @apiSuccess {String} processorType The processor type of the analytics processor definition.
@@ -149,7 +149,7 @@ router.route('/:id').put(validate(blueprint.updateAnalyticsProcessorDefinition),
 /**
  * @api {delete} /analytics-processor-definitions/:id Delete analytics processor definition
  * @apiName DeleteAnalyticsProcessorDefinition
- * @apiDescription Deletes a analytics processor definition.
+ * @apiDescription Deletes an analytics processor definition.
  * @apiGroup ANALYTICS PROCESSOR DEFINITIONS
  *
  * @apiSuccess {String} id The ID of the analytics processor definition.
@@ -174,12 +174,12 @@ router.route('/:id').delete(validate(blueprint.deleteAnalyticsProcessorDefinitio
 /**
  * @api {get} /analytics-processor-definitions/:id Get analytics processor definition
  * @apiName GetAnalyticsProcessorDefinition
- * @apiDescription Gets a analytics processor definition.
+ * @apiDescription Gets an analytics processor definition.
  * @apiGroup ANALYTICS PROCESSOR DEFINITIONS
  *
  * @apiParam {String} id The ID of the analytics processor definition.
  *
- * @apiSuccess {String} _id The ID of the analytics processor definition.
+ * @apiSuccess {String} id The ID of the analytics processor definition.
  * @apiSuccess {String} name The name of the analytics processor definition.
  * @apiSuccess {String} [description] The description of the analytics processor definition.
  * @apiSuccess {String} processorType The processor type of the analytics processor definition.
@@ -222,7 +222,7 @@ router.route('/:id').get(validate(blueprint.getAnalyticsProcessorDefinition),
  * @apiDescription Discovers analytics processor definitions.
  * @apiGroup ANALYTICS PROCESSOR DEFINITIONS
  *
- * @apiParam {String} [_id] The ID of the analytics processor definition.
+ * @apiParam {String} [id] The ID of the analytics processor definition.
  * @apiParam {String} [name] The name of the analytics processor definition.
  * @apiParam {String} [processorType] The processor type of the analytics processor definition.
  * @apiParam {String} [version] The version of the analytics processor definition.
@@ -232,7 +232,7 @@ router.route('/:id').get(validate(blueprint.getAnalyticsProcessorDefinition),
  *   }
  *
  * @apiSuccess {Object[]} analyticsProcessorDefinitions The analytics processor definitions that match the given criteria.
- * @apiSuccess {String} analyticsProcessorDefinitions._id The ID of the analytics processor definition.
+ * @apiSuccess {String} analyticsProcessorDefinitions.id The ID of the analytics processor definition.
  * @apiSuccess {String} analyticsProcessorDefinitions.name The name of the analytics processor definition.
  * @apiSuccess {String} [analyticsProcessorDefinitions.description] The description of the analytics processor definition.
  * @apiSuccess {String} analyticsProcessorDefinitions.processorType The processor type of the analytics processor definition.
@@ -250,7 +250,7 @@ router.route('/:id').get(validate(blueprint.getAnalyticsProcessorDefinition),
  *   {
  *     "analyticsProcessorDefinitions" : [
  *       {
- *         "_id": "5376c0aa-a93a-49e7-a5d9-16ff56d2e014",
+ *         "id": "5376c0aa-a93a-49e7-a5d9-16ff56d2e014",
  *         "name": "Average calculator",
  *         "description": "Represents processors that read values from their source, calculate the running average, and write it to their sink.",
  *         "processorType": "average",

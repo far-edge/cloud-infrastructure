@@ -21,7 +21,7 @@ const deleteDataSourceDefinition = {
 // How to discover data source definitions.
 const discoverDataSourceDefinitions = {
   body: {
-    _id: validations.id().allow('').allow(null).optional(),
+    id: validations.id().allow('').allow(null).optional(),
     name: validations.string().optional(),
     dataInterfaceReferenceID: validations.id().optional(),
     dataKindReferenceID: validations.id().optional()

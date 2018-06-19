@@ -1,7 +1,0 @@
-{
-  "_id": "5376c0aa-a93a-49e7-a5d9-16ff56d2e014",
-  "name": "Average calculator",
-  "description": "Represents processors that read values from their source, calculate the running average, and write it to their sink.",
-  "processorType": "average",
-  "version": "1.0.0"
-}

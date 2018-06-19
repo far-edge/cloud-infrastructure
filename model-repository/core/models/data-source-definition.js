@@ -47,4 +47,15 @@ const DataSourceDefinitionSchema = new mongoose.Schema({
   timestamps: true
 });
 
+DataSourceDefinitionSchema.set('toJSON', {
+  transform: (doc, ret, _options) => {
+    ret.id = ret._id;
+    delete ret._id;
+    delete ret.__v;
+    delete ret.createdAt;
+    delete ret.updatedAt;
+    return ret;
+  }
+});
+
 module.exports = mongoose.model('DataSourceDefinition', DataSourceDefinitionSchema);

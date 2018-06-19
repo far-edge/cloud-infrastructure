@@ -28,14 +28,14 @@ const router = express.Router({ mergeParams: true });
  *     }
  *   }
  *
- * @apiSuccess {String} _id The ID of the data source definition.
+ * @apiSuccess {String} id The ID of the data source definition.
  * @apiSuccess {String} name The name of the data source definition.
  * @apiSuccess {String} dataInterfaceReferenceID The data interface of the data source definition.
  * @apiSuccess {String[]} dataKindReferenceIDs.dataKindReferenceID The data kinds of the data source definition.
  * @apiSuccessExample Success
  *   HTTP/1.1 201 Created
  *   {
- *     "_id": "a89524a9-e8f7-455c-857b-0380ff308412",
+ *     "id": "a89524a9-e8f7-455c-857b-0380ff308412",
  *     "name": "Temperature in JSON Format over MQTT",
  *     "dataInterfaceReferenceID": "6b8b37d0-3f74-4d80-9669-7aafb545f9f8",
  *     "dataKindReferenceIDs": {
@@ -87,14 +87,14 @@ router.route('/').post(validate(blueprint.createDataSourceDefinition),
  *     }
  *   }
  *
- * @apiSuccess {String} _id The ID of the data source definition.
+ * @apiSuccess {String} id The ID of the data source definition.
  * @apiSuccess {String} name The name of the data source definition.
  * @apiSuccess {String} dataInterfaceReferenceID The data interface of the data source definition.
  * @apiSuccess {String[]} dataKindReferenceIDs.dataKindReferenceID The data kinds of the data source definition.
  * @apiSuccessExample Success
  *   HTTP/1.1 200 OK
  *   {
- *     "_id": "a89524a9-e8f7-455c-857b-0380ff308412",
+ *     "id": "a89524a9-e8f7-455c-857b-0380ff308412",
  *     "name": "Temperature in JSON Format over MQTT",
  *     "dataInterfaceReferenceID": "6b8b37d0-3f74-4d80-9669-7aafb545f9f8",
  *     "dataKindReferenceIDs": {
@@ -158,14 +158,14 @@ router.route('/:id').delete(validate(blueprint.deleteDataSourceDefinition),
  *
  * @apiParam {String} id The ID of the data source definition.
  *
- * @apiSuccess {String} _id The ID of the data source definition.
+ * @apiSuccess {String} id The ID of the data source definition.
  * @apiSuccess {String} name The name of the data source definition.
  * @apiSuccess {String} dataInterfaceReferenceID The data interface of the data source definition.
  * @apiSuccess {String[]} dataKindReferenceIDs.dataKindReferenceID The data kinds of the data source definition.
  * @apiSuccessExample Success
  *   HTTP/1.1 200 OK
  *   {
- *     "_id": "a89524a9-e8f7-455c-857b-0380ff308412",
+ *     "id": "a89524a9-e8f7-455c-857b-0380ff308412",
  *     "name": "Temperature in JSON Format over MQTT",
  *     "dataInterfaceReferenceID": "6b8b37d0-3f74-4d80-9669-7aafb545f9f8",
  *     "dataKindReferenceIDs": {
@@ -195,7 +195,7 @@ router.route('/:id').get(validate(blueprint.getDataSourceDefinition),
  * @apiDescription Discovers data source definitions.
  * @apiGroup DATA SOURCE DEFINITIONS
  *
- * @apiParam {String} [_id] The ID of the data source definition.
+ * @apiParam {String} [id] The ID of the data source definition.
  * @apiParam {String} [name] The name of the data source definition.
  * @apiSuccess {String} [dataInterfaceReferenceID] The data interface of the data source definition.
  * @apiSuccess {String} [dataKindReferenceID] The data kind of the data source definition.
@@ -205,7 +205,7 @@ router.route('/:id').get(validate(blueprint.getDataSourceDefinition),
  *   }
  *
  * @apiSuccess {Object[]} dataSourceDefinitions The data source definitions that match the given criteria.
- * @apiSuccess {String} dataSourceDefinitions._id The ID of the data source definition.
+ * @apiSuccess {String} dataSourceDefinitions.id The ID of the data source definition.
  * @apiSuccess {String} dataSourceDefinitions.dataInterfaceReferenceID The data interface of the data source definition.
  * @apiSuccess {String[]} dataSourceDefinitions.dataKindReferenceIDs.dataKindReferenceID The data kinds of the data source definition.
  * @apiSuccessExample Success
@@ -213,7 +213,7 @@ router.route('/:id').get(validate(blueprint.getDataSourceDefinition),
  *   {
  *     "dataSourceDefinitions": [
  *       {
- *         "_id": "a89524a9-e8f7-455c-857b-0380ff308412",
+ *         "id": "a89524a9-e8f7-455c-857b-0380ff308412",
  *         "name": "Temperature in JSON Format over MQTT",
  *         "dataInterfaceReferenceID": "6b8b37d0-3f74-4d80-9669-7aafb545f9f8",
  *         "dataKindReferenceIDs": {

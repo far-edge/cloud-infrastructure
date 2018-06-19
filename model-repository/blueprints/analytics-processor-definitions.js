@@ -33,7 +33,7 @@ const deleteAnalyticsProcessorDefinition = {
 // How to discover analytics processor definitions.
 const discoverAnalyticsProcessorDefinitions = {
   body: {
-    _id: validations.id().allow('').allow(null).optional(),
+    id: validations.id().allow('').allow(null).optional(),
     name: validations.string().allow('').allow(null).optional(),
     processorType: validations.string().allow('').allow(null).optional(),
     version: validations.string().allow('').allow(null).optional()

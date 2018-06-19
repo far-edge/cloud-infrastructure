@@ -21,7 +21,7 @@ const deleteDataKind = {
 // How to discover data kinds.
 const discoverDataKinds = {
   body: {
-    _id: validations.id().allow('').allow(null).optional(),
+    id: validations.id().allow('').allow(null).optional(),
     name: validations.string().allow('').allow(null).optional(),
     description: validations.string().allow('').allow(null).optional(),
     modelType: validations.string().allow('').allow(null).optional(),

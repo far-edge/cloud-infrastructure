@@ -9,7 +9,7 @@ const discoverDataInterfaces = (input) => {
   return Promise.try(() => {
     // Find the data interfaces that match the given criteria.
     return DataInterface.find({
-      ...(input._id ? { _id: input._id } : { }),
+      ...(input.id ? { _id: input.id } : { }),
       ...(input.name ? { name: input.name } : { }),
       ...(input.communicationProtocol ? {
         communicationProtocol: input.communicationProtocol

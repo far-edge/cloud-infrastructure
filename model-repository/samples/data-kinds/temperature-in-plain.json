@@ -1,0 +1,7 @@
+{
+  "id": "58e18269-f471-436c-a04b-eded12ade3a9",
+  "name": "Temperature (in Celsius) in plain text",
+  "description": "Temperature values (in Celsius) in plain text format.",
+  "format": "Plain text",
+  "quantityKind": "Temperature"
+}
