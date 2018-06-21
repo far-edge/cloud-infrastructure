@@ -19,6 +19,7 @@ const updateDataSourceDefinition = (input) => {
     }
     // Change the data source definition.
     dataSourceDefinition.name = input.name;
+    dataSourceDefinition.description = input.description;
     dataSourceDefinition.dataInterfaceReferenceID = input.dataInterfaceReferenceID;
     dataSourceDefinition.dataKindReferenceIDs = input.dataKindReferenceIDs;
     // Validate the data source definition.

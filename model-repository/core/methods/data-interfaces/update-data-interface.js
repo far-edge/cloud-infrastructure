@@ -19,6 +19,7 @@ const updateDataInterface = (input) => {
     }
     // Change the data interface.
     dataInterface.name = input.name;
+    dataInterface.description = input.description;
     dataInterface.communicationProtocol = input.communicationProtocol;
     dataInterface.parameters = input.parameters;
     // Validate the data interface.
