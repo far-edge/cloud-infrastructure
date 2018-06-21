@@ -23,6 +23,7 @@ const createDataSourceDefinition = (overrides) => {
           ]
         }
       },
+      ...(faker.random.boolean() ? { description: faker.random.words(10) } : { }),
       ...overrides
     });
     return dataSourceDefinition.save();

@@ -11,6 +11,7 @@ const _parameter = validations.object().keys({
 const createDataInterface = {
   body: {
     name: validations.string().required(),
+    description: validations.string().allow('').allow(null).optional(),
     communicationProtocol: validations.string().allow('').allow(null).optional(),
     parameters: validations.object().keys({
       parameter: validations.array().items(_parameter).required()
@@ -30,6 +31,7 @@ const discoverDataInterfaces = {
   body: {
     id: validations.id().allow('').allow(null).optional(),
     name: validations.string().allow('').allow(null).optional(),
+    description: validations.string().allow('').allow(null).optional(),
     communicationProtocol: validations.string().allow('').allow(null).optional()
   }
 };
@@ -48,6 +50,7 @@ const updateDataInterface = {
   },
   body: {
     name: validations.string().required(),
+    description: validations.string().allow('').allow(null).optional(),
     communicationProtocol: validations.string().allow('').allow(null).optional(),
     parameters: validations.object().keys({
       parameter: validations.array().items(_parameter).required()

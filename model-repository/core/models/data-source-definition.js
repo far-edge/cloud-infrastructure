@@ -29,6 +29,12 @@ const DataSourceDefinitionSchema = new mongoose.Schema({
     unique: true
   },
 
+  // The description of the data source definition.
+  description: {
+    type: String,
+    required: false
+  },
+
   // The data interface of the data source definition.
   dataInterfaceReferenceID: {
     type: String,

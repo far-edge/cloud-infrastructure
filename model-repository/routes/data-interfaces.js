@@ -15,6 +15,7 @@ const router = express.Router({ mergeParams: true });
  * @apiGroup DATA INTERFACES
  *
  * @apiParam {String} name The name of the data interface.
+ * @apiParam {String} [description] The description of the data interface.
  * @apiParam {String} [communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiParam {Object[]} [parameters.parameter] The parameters of the data interface.
  * @apiParam {String} parameters.parameter.name The name of the parameter.
@@ -43,6 +44,7 @@ const router = express.Router({ mergeParams: true });
  *
  * @apiSuccess {String} id The ID of the data interface.
  * @apiSuccess {String} name The name of the data interface.
+ * @apiSuccess {String} [description] The description of the data interface.
  * @apiSuccess {String} [communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiSuccess {Object[]} [parameters.parameter] The parameters of the data interface.
  * @apiSuccess {String} parameters.parameter.name The name of the parameter.
@@ -98,6 +100,7 @@ router.route('/').post(validate(blueprint.createDataInterface), lift(method.crea
  *
  * @apiParam {String} id The ID of the data interface.
  * @apiParam {String} name The name of the data interface.
+ * @apiParam {String} [description] The description of the data interface.
  * @apiParam {String} [communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiParam {Object[]} [parameters.parameter] The parameters of the data interface.
  * @apiParam {String} parameters.parameter.name The name of the parameter.
@@ -126,6 +129,7 @@ router.route('/').post(validate(blueprint.createDataInterface), lift(method.crea
  *
  * @apiSuccess {String} id The ID of the data interface.
  * @apiSuccess {String} name The name of the data interface.
+ * @apiSuccess {String} [description] The description of the data interface.
  * @apiSuccess {String} [communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiSuccess {Object[]} [parameters.parameter] The parameters of the data interface.
  * @apiSuccess {String} parameters.parameter.name The name of the parameter.
@@ -209,6 +213,7 @@ router.route('/:id').delete(validate(blueprint.deleteDataInterface), lift(method
  *
  * @apiSuccess {String} id The ID of the data interface.
  * @apiSuccess {String} name The name of the data interface.
+ * @apiSuccess {String} [description] The description of the data interface.
  * @apiSuccess {String} [communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiSuccess {Object[]} [parameters.parameter] The parameters of the data interface.
  * @apiSuccess {String} parameters.parameter.name The name of the parameter.
@@ -259,6 +264,7 @@ router.route('/:id').get(validate(blueprint.getDataInterface), lift(method.getDa
  *
  * @apiParam {String} [id] The ID of the data interface.
  * @apiParam {String} [name] The name of the data interface.
+ * @apiParam {String} [description] The description of the data interface.
  * @apiParam {String} [communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiParamExample {json} Request
  *   {
@@ -268,6 +274,7 @@ router.route('/:id').get(validate(blueprint.getDataInterface), lift(method.getDa
  * @apiSuccess {Object[]} dataInterfaces The data interfaces that match the given criteria.
  * @apiSuccess {String} dataInterfaces.id The ID of the data interface.
  * @apiSuccess {String} dataInterfaces.name The name of the data interface.
+ * @apiSuccess {String} [dataInterfaces.description] The description of the data interface.
  * @apiSuccess {String} [dataInterfaces.communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiSuccess {Object[]} [dataInterfaces.parameters.parameter] The parameters of the data interface.
  * @apiSuccess {String} dataInterfaces.parameters.parameter.name The name of the parameter.

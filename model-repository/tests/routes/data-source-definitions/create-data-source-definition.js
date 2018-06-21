@@ -14,13 +14,16 @@ const testCreateDataSourceDefinition = () => {
       const p2 = dataKindHelper.createDataKind({});
       const p = Promise.all([ p1, p2 ]).spread((dataInterface, dataKind) => {
         const data = {
-          name: faker.random.words(2),
-          dataInterfaceReferenceID: dataInterface._id,
-          dataKindReferenceIDs: {
-            dataKindReferenceID: [
-              dataKind._id
-            ]
-          }
+          ...{
+            name: faker.random.words(2),
+            dataInterfaceReferenceID: dataInterface._id,
+            dataKindReferenceIDs: {
+              dataKindReferenceID: [
+                dataKind._id
+              ]
+            }
+          },
+          ...(faker.random.boolean() ? { description: faker.random.words(10) } : { })
         };
         return requests.cpost(app, '/api/data-source-definitions', data);
       });

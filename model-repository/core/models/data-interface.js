@@ -57,6 +57,12 @@ const DataInterfaceSchema = new mongoose.Schema({
     unique: true
   },
 
+  // The description of the data interface.
+  description: {
+    type: String,
+    required: false
+  },
+
   // The protocol of the data interface (e.g., MQTT).
   communicationProtocol: {
     type: String,

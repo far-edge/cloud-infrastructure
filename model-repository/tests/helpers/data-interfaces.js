@@ -10,6 +10,7 @@ const createDataInterface = (overrides) => {
       name: faker.random.words(2),
       communicationProtocol: faker.random.words(2),
     },
+    ...(faker.random.boolean() ? { description: faker.random.words(10) } : { }),
     ...(faker.random.boolean() ? {
       parameters: {
         parameter: [

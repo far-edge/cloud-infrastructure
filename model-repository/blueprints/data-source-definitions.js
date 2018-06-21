@@ -4,6 +4,7 @@ const validations = require('../core/common/validations');
 const createDataSourceDefinition = {
   body: {
     name: validations.string().required(),
+    description: validations.string().allow('').allow(null).optional(),
     dataInterfaceReferenceID: validations.id().required(),
     dataKindReferenceIDs: validations.object().keys({
       dataKindReferenceID: validations.array().items(validations.id()).required()
@@ -23,6 +24,7 @@ const discoverDataSourceDefinitions = {
   body: {
     id: validations.id().allow('').allow(null).optional(),
     name: validations.string().optional(),
+    description: validations.string().allow('').allow(null).optional(),
     dataInterfaceReferenceID: validations.id().optional(),
     dataKindReferenceID: validations.id().optional()
   }
@@ -42,6 +44,7 @@ const updateDataSourceDefinition = {
   },
   body: {
     name: validations.string().required(),
+    description: validations.string().allow('').allow(null).optional(),
     dataInterfaceReferenceID: validations.id().required(),
     dataKindReferenceIDs: validations.object().keys({
       dataKindReferenceID: validations.array().items(validations.id()).required()

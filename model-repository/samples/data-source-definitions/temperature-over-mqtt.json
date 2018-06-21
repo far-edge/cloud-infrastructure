@@ -1,6 +1,7 @@
 {
   "id": "9cc0b6fd-5f13-4f44-8c16-e652d7d1fcd1",
   "name": "Temperature (in Celsius) in plain text over MQTT",
+  "description": "Temperature (in Celsius) in plain text format over MQTT.",
   "dataInterfaceReferenceID": "d9f01910-f981-4462-8814-fe5fdfadc936",
   "dataKindReferenceIDs": {
     "dataKindReferenceID": [

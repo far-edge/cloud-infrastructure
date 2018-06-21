@@ -11,6 +11,7 @@ const discoverDataInterfaces = (input) => {
     return DataInterface.find({
       ...(input.id ? { _id: input.id } : { }),
       ...(input.name ? { name: input.name } : { }),
+      ...(input.description ? { description: input.description } : { }),
       ...(input.communicationProtocol ? {
         communicationProtocol: input.communicationProtocol
       } : { })
