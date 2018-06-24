@@ -184,7 +184,6 @@ router.route('/:id').get(validate(blueprint.getDataKind), lift(method.getDataKin
  *
  * @apiParam {String} [id] The ID of the data kind.
  * @apiParam {String} [name] The name of the data kind.
- * @apiParam {String} [description] The description of the data kind.
  * @apiParam {String} [modelType] The model type of the data kind (e.g., SenML).
  * @apiParam {String} [format] The format of the data kind (e.g., JSON).
  * @apiParam {String} [quantityKind] The kind of the quantity of the data kind (e.g., Temperature).

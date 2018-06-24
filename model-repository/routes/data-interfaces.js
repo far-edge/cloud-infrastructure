@@ -264,7 +264,6 @@ router.route('/:id').get(validate(blueprint.getDataInterface), lift(method.getDa
  *
  * @apiParam {String} [id] The ID of the data interface.
  * @apiParam {String} [name] The name of the data interface.
- * @apiParam {String} [description] The description of the data interface.
  * @apiParam {String} [communicationProtocol] The protocol of the data interface (e.g., MQTT).
  * @apiParamExample {json} Request
  *   {

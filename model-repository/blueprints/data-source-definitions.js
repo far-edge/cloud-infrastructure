@@ -24,7 +24,6 @@ const discoverDataSourceDefinitions = {
   body: {
     id: validations.id().allow('').allow(null).optional(),
     name: validations.string().optional(),
-    description: validations.string().allow('').allow(null).optional(),
     dataInterfaceReferenceID: validations.id().optional(),
     dataKindReferenceID: validations.id().optional()
   }

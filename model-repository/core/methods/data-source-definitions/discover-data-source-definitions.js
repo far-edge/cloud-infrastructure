@@ -11,7 +11,6 @@ const discoverDataSourceDefinitions = (input) => {
     return DataSourceDefinition.find({
       ...(input.id ? { _id: input.id } : { }),
       ...(input.name ? { name: input.name } : { }),
-      ...(input.description ? { description: input.description } : { }),
       ...(input.dataInterfaceReferenceID ? {
         dataInterfaceReferenceID: input.dataInterfaceReferenceID
       } : { }),

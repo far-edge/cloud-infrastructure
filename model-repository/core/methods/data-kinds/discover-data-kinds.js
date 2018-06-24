@@ -11,7 +11,6 @@ const discoverDataKinds = (input) => {
     return DataKind.find({
       ...(input.id ? { _id: input.id } : { }),
       ...(input.name ? { name: input.name } : { }),
-      ...(input.description ? { description: input.description } : { }),
       ...(input.modelType ? { modelType: input.modelType } : { }),
       ...(input.format ? { format: input.format } : { }),
       ...(input.quantityKind ? { quantityKind: input.quantityKind } : { })

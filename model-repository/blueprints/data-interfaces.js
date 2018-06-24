@@ -31,7 +31,6 @@ const discoverDataInterfaces = {
   body: {
     id: validations.id().allow('').allow(null).optional(),
     name: validations.string().allow('').allow(null).optional(),
-    description: validations.string().allow('').allow(null).optional(),
     communicationProtocol: validations.string().allow('').allow(null).optional()
   }
 };
